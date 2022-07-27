@@ -12,4 +12,4 @@ num>>=1
 def solution(num):
     return max(num.bit_count() + num.bit_length() - 1, 0)
 # print(solution(10))
-print(ans.bit_count())
+# print(ans.bit_count())
