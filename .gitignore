@@ -4,3 +4,4 @@ __pycache__
 jupyterenv
 .coverage
 coverage.xml
+.pytest_cache
