@@ -1,3 +1,4 @@
+num=123
 def test(num):
     ans =0
     while num:
