@@ -1,3 +1,4 @@
+num=123
 def test(num):
     count=0
     def fib_test(num):
@@ -13,4 +14,3 @@ def test(num):
             return count+1
 
     print(fib_test(num))
-test(123)
