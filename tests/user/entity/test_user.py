@@ -1,6 +1,6 @@
 from user.entity.user import User
 
-
+    
 def test_create_a_user():
     user = User('User', 'User123')
 
