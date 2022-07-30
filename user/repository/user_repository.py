@@ -1,6 +1,7 @@
 
+from readline import write_history_file
 from user.entity.user import User
-from user.utils.file_handler import add_to_file, read_from_file
+from user.utils.file_handler import add_to_file, read_from_file, write_to_file
 
 
 class UserRepository:
@@ -17,6 +18,26 @@ class UserRepository:
         self.users.append(user)
         line=self._map_to_line(user)
         add_to_file(self.data_file,line)
+
+    def find(self,username:str,password:str)->User:
+        self._load()
+        for user in self.users:
+            if user.username==username and user.password==password:
+                return User(username=username,password=password)
+            else:
+                return None
+    
+    def update(self, user: User) -> None:
+        for original_user in self.users:
+            if original_user.username==user.username:
+                original_user.password=user.password
+                original_user.token=user.token
+                self._refresh(self.users,self.data_file)
+                
+    @classmethod
+    def _refresh(cls,users,path):
+        user_lines=[f'{user.username} {user.password} {user.token}' for user in users]
+        write_to_file(path, user_lines)
 
     def _load(self):
         lines = read_from_file(self.data_file)
