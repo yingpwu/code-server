@@ -1,10 +1,13 @@
 from user.utils.jwt import encode
 
 class User():
-    def __init__(self,username=None,password=None):
+    def __init__(self,username=None,password=None,token=None):
         self.username=username
         self.password=password
-        self._build_token()
+        if token:
+            self.token=token
+        else:
+            self._build_token()
     def __eq__(self, other):
         if not isinstance(other, User):
             return False

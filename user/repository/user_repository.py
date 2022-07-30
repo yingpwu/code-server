@@ -25,10 +25,10 @@ class UserRepository:
 
     def _map_to_user(self,line) -> User:
         if line and line.strip():
-            username,password=line.strip().replace("\n","").split(" ")
-            return User(username,password)
+            username,password,token=line.strip().replace("\n","").split(" ")
+            return User(username,password,token)
 
     def _map_to_line(self,user:User)->str:
-        return f'{user.username} {user.password}\n'
+        return f'{user.username} {user.password} {user.token}\n'
 
 
