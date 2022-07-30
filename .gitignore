@@ -1,7 +1,7 @@
 venv
+jupytervenv
 .vscode
 __pycache__
-jupytervenv
 .coverage
 coverage.xml
 .pytest_cache
