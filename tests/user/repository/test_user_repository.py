@@ -147,6 +147,8 @@ def test_user_update(read_from_file, write_to_file, lines):
     username = 'coder'
     password = 'coder123'
     user = user_repository.find(username, password)
+    user.token='updated_fake_token_for_coder'
+    
     user_repository.update(user)
     except_lines = [
         f'{user.username} {user.password} {user.token}'
