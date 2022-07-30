@@ -1,6 +1,6 @@
 from user.entity.user import User
+from unittest import mock
 
-    
 def test_create_a_user():
     user = User('User', 'User123')
 
@@ -22,3 +22,28 @@ def test_user_identified_with_only_username():
     user2 = User('User', 'User123')
 
     assert user1 == user2
+
+
+def test_user_identified_with_only_username():
+    user1 = User('User', 'user123')
+    user2 = User('User', 'user123')
+
+    assert user1.username == user2.username
+
+
+def test_user_should_have_the_token_atrribute():
+    user = User('User', 'User123')
+
+    user.token = '123adc'
+
+    assert user.token is not None
+
+
+@mock.patch('user.entity.user.encode')
+def test_token_should_be_built_when_initialize_the_user(encode):
+
+    GIVEN_TOKEN = 'xxxzzz'
+    encode.return_value=GIVEN_TOKEN
+    user = User('User', 'User123')
+
+    assert user.token == GIVEN_TOKEN
