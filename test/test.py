@@ -14,3 +14,6 @@ def test(num):
             return count+1
 
     print(fib_test(num))
+
+for i in range(2):
+    print(i)

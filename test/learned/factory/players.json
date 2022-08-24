@@ -1,0 +1,17 @@
+{
+    "players": [
+        {
+            "name": "Eric Cantona",
+            "role": "FW"
+        }, {
+            "name": "David Beckham",
+            "role": "MF"
+        }, {
+            "name": "Steve Bruce",
+            "role": "DF"
+        }, {
+            "name": "Roser",
+            "role": "GK"
+        }
+    ]
+}

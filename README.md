@@ -20,18 +20,9 @@
             "message": "用户验证有效",
             "token": token
         },200
-<<<<<<< Updated upstream
-3.2 用户非法
-    3.2.1 返回调用方
-    {
-        "success": False,
-        "message": "用户非法",
-    },401
-=======
 - 3.2 用户非法
 -     3.2.1 返回调用方
 - {
   "success": False,
   "message": "用户非法",
   },401
->>>>>>> Stashed changes
