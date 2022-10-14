@@ -1,9 +1,6 @@
 import jwt
 
 
-import jwt
-
-
 def encode(payload):
     return jwt.encode(payload, 'screct', algorithm='HS256')
 

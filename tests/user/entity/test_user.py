@@ -5,6 +5,8 @@ def test_create_a_user():
     user = User('User', 'User123')
 
     assert user is not None
+    assert user.username=="User"
+    assert user.password=="User123"
 
 
 def test_create_a_new_user_with_given_username_and_password():
@@ -22,19 +24,13 @@ def test_user_identified_with_only_username():
     user2 = User('User', 'User123')
 
     assert user1 == user2
-
-
-def test_user_identified_with_only_username():
-    user1 = User('User', 'user123')
-    user2 = User('User', 'user123')
-
     assert user1.username == user2.username
 
 
 def test_user_should_have_the_token_atrribute():
     user = User('User', 'User123')
 
-    user.token = '123adc'
+    # user.token = '123adc'
 
     assert user.token is not None
 

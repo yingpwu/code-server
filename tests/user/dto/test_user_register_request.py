@@ -16,3 +16,5 @@ def test_user_register_request_equals_with_username_and_password():
 
     user_register_request1 = UserRegisterRequest(username, password)
     user_register_request2 = UserRegisterRequest(username, password)
+
+    assert user_register_request1==user_register_request2

@@ -13,5 +13,5 @@ for i in range(1, len(v)):
     for j in range(c, 0, -1):
         if w[i] <= j:
             dp[j] = max(dp[j], dp[j-w[i]]+v[i])
-        print(dp)
-# print(dp)
+        # print(dp)
+print(dp)
